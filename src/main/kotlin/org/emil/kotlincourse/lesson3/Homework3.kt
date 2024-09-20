@@ -2,6 +2,7 @@ package com.emil.org.emil.kotlincourse.lesson3
 
 //Организация мероприятия Hackathon Survival
 
+/*
 val nameEvent: String = "Hackathon Survival" //Название мероприятия
 
 var dateEvent: String = "20.07.2025" //Дата проведения
@@ -115,3 +116,4 @@ val maxNumberPeople: Int = 500
 
 val teamTimeWork: Int = 8*60*60
 //Стандартное количество часов, отведенное каждой команде для работы над проектом.
+*/

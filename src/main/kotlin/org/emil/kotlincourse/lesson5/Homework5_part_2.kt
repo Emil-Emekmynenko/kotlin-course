@@ -1,8 +1,8 @@
 package com.emil.org.emil.kotlincourse.lesson5
 
 fun main () {
-    printSoundAttenuation(1000, 7.7)
-    printSoundAttenuation(1000, null)
+    printSoundAttenuation(100.0, 7.7)
+    printSoundAttenuation(100.0, null)
 
     printDeliveryPrice(9.0)
     printDeliveryPrice(null)
@@ -18,7 +18,7 @@ fun main () {
 Интенсивность звука после затухания пропорциональна начальной интенсивности, умноженной на коэффициент затухания.
 Если коэффициент затухания неизвестен, использовать стандартное значение 0.5.
 */
-fun printSoundAttenuation (initialIntensity: Int, attenuationCoefficient: Double?) {
+fun printSoundAttenuation (initialIntensity: Double, attenuationCoefficient: Double?) {
     println(initialIntensity * (attenuationCoefficient ?: 0.5))
 }
 

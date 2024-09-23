@@ -7,7 +7,7 @@ fun main () {
     calculationBonusPoints(1100)
     println(typeDocument("txt"))
     println(temperatureConversion(100,"C"))
-    println(selectionOfClothes(33))
+    println(selectionOfClothes(36))
     println(movieSelection(14))
 
 }
@@ -125,10 +125,11 @@ fun temperatureConversion (numberInDegrees: Int, unitOfMeasurement: String): Str
 
 fun selectionOfClothes (t: Int): String {
     val result = when {
-        ((t < -30) || (t > 35)) -> "рекомендуем не выходить из дома"
+        t > 35 -> "рекомендуем не выходить из дома"
+        t < -30 -> "рекомендуем не выходить из дома"
         t < 0 -> "куртка и шапка"
         t in 0..15 -> "ветровка"
-        t > 15 -> "футболка и шорты"
+        t > 16 -> "футболка и шорты"
         else -> "Введите другую температуру"
     }
     return "Как лучше одеться: $result"

@@ -51,16 +51,16 @@ fun petsAge (age: Int) {
 Если маршрут до 1 км - "пешком", до 5 км - "велосипед", иначе - "автотранспорт".
 */
 
-fun modeOfTransport (routeLength: Double) {
+fun modeOfTransport (routeLength: Double): String {
     if (routeLength < 0.0) {
-        return println("Выбор невозможен")
+        return "Выбор невозможен"
     }
-    val result = when (routeLength) {
-        in 0.1..1.0  -> "Пешком"
-        in 1.1..5.0 -> "Велосипед"
+    val result = when {
+        routeLength <= 1.0  -> "Пешком"
+        routeLength <= 5.0 -> "Велосипед"
         else -> "Автотранспорт"
     }
-    return println(result)
+    return result
 }
 
 /*
@@ -124,15 +124,12 @@ fun temperatureConversion (numberInDegrees: Int, unitOfMeasurement: String): Str
  */
 
 fun selectionOfClothes (t: Int): String {
-    val result = when {
-        t > 35 -> "рекомендуем не выходить из дома"
-        t < -30 -> "рекомендуем не выходить из дома"
-        t < 0 -> "куртка и шапка"
-        t in 0..15 -> "ветровка"
-        t > 16 -> "футболка и шорты"
-        else -> "Введите другую температуру"
+    return when (t){
+        in -30 until 0 -> "куртка и шапка"
+        in 0..15 -> "ветровка"
+        in 16..35 -> "футболка и шорты"
+        else -> "рекомендуем не выходить из дома"
     }
-    return "Как лучше одеться: $result"
 }
 
 /*

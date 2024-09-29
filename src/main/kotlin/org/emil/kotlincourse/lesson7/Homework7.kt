@@ -77,8 +77,8 @@ fun reverseRange1 () {
 
 fun reverseRange2 () {
     val downTo = 10 downTo 1
-    for (i in downTo step 2) {
-        print(i)
+    for (i in downTo) {
+        print(i - 2)
         print(" ")
     }
 }
@@ -146,10 +146,10 @@ fun cycleSquare1 () {
 
 fun cycleSquare2 (){
     var counter = 10
-    while(counter > 5) {
-        counter--
+    while(counter-- > 5) {
+        print(counter)
+        print(" ")
     }
-    print(counter)
 }
 /*
 Цикл do...while:
@@ -162,17 +162,16 @@ fun cycleSquare2 (){
 fun rangeDoWhile1 () {
     var number = 5
     do {
-        println(number)
-        number--
+        print(number--)
+        print(" ")
     } while (number >= 1)
 }
 
 fun rangeDoWhile2 () {
     var number = 5
     do {
-        print(number)
+        print(number++)
         print(" ")
-        number++
     } while (number < 10)
 }
 
@@ -194,11 +193,11 @@ fun rangeBreak1 () {
 }
 
 fun rangeBreak2 () {
-    val counter = 12
-    for (i in 1..counter){
-        print(i)
+    var counter = 1
+    while (true) {
+        if (counter == 10) break
+        print(counter++)
         print(" ")
-        if (i == 10) break
     }
 }
 
@@ -221,10 +220,12 @@ fun rangeContinue1 () {
 }
 
 fun rangeContinue2 () {
-    val counter = 1..10
-    for (i in counter){
-        if (i % 3 == 0) continue
-        print(i)
+    var counter = 1
+    while (counter <= 10) {
+        if (counter % 3 == 0) {
+            counter++;continue
+        }
+        print(counter++)
         print(" ")
     }
 }

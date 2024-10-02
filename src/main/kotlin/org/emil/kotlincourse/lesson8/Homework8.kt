@@ -7,6 +7,8 @@ fun main () {
     emailFormatting("username@example.com")
     nameExtraction("C:/Пользователи/Документы/report.txt")
     creatingAbbreviation("Объектно-ориентированное программирование")
+    creatingWord("петя,вася,женя")
+    println(encrypt("бублик+"))
 }
 
 /*
@@ -97,6 +99,7 @@ fun nameExtraction (string: String) {
     val pathTransformation = string.split("/")
     println(pathTransformation.last())
 }
+
 /*
 Задание 5: Создание Аббревиатуры из Фразы.
 Используй split с набором символов для разделения.
@@ -108,7 +111,53 @@ fun nameExtraction (string: String) {
 fun creatingAbbreviation (string: String) {
     val phraseConversion = string.split(' ','-','/','.',',')
     var abbreviation = ""
-    for (i in phraseConversion)
+    for (i in phraseConversion) {
+        if (i.isNotEmpty())
         abbreviation += i[0]
+    }
     println(abbreviation.uppercase())
+}
+
+/*
+Написать метод, который преобразует строку из нескольких слов в строку,
+где каждое слово начинается с заглавной буквы, а все остальные - строчные.
+(можно использовать такой же подход как в задании 5,
+но накапливать не первые буквы, а целиком слова,
+составленные из первой буквы с uppercase и оставшейся части слова)
+ */
+
+fun creatingWord (string: String) {
+    var result = ""
+    val phraseConversion = string.split(' ','-','/','.',',')
+    for (i in phraseConversion) {
+        val uppercaseOne = i.replace(i[0],i[0].uppercaseChar())
+        result += "$uppercaseOne "
+    }
+    println(result)
+}
+
+/*
+Написать шифратор/дешифратор для строки.
+Шифровка производится путём замены двух соседних букв между собой: Kotlin шифруется в oKltni.
+Дешифровка выполняется аналогично. Если длина строки - нечётная,
+в конец добавляется символ пробела до начала шифрования.
+Таким образом все шифрованные сообщения будут с чётной длинной.
+Должно получиться два публичных метода: encrypt() и decrypt() которые принимают и возвращают строку.
+*/
+
+fun encrypt(string: String): String {
+    var newString = string
+    if (newString.length % 2 != 0) {
+        newString += " "
+    }
+    return decrypt(newString)
+}
+
+fun decrypt(string: String) : String {
+    var result = ""
+    for (i in string.indices step 2) {
+        result += string[i + 1]
+        result += string[i]
+    }
+    return result
 }

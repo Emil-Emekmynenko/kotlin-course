@@ -1,7 +1,5 @@
 package com.emil.org.emil.kotlincourse.lesson7
 
-import javax.sql.RowSetListener
-
 fun main () {
     cycle1()
     println()

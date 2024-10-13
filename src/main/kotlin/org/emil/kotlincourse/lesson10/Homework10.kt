@@ -56,7 +56,7 @@ fun main() {
     println(arrayResult.toList())
 
 
-    println(indexCount(arrayOf(0, 4, 8, 34, 343, 8, 6, 7, 8, 332, 234, 465, 567)))
+    println(indexCount(arrayOf(0, 4, 8, 34, 343, 5, 8, 6, 7, 8, 332, 234, 465, 567)))
     iteratingOverArray(arrayOf(1, 4, 5, 6, 7, 8, 90, 4, 3, 2, 2, 4, 7, 9, 0, -6))
     iterateOverList()
     mergingLists()
@@ -81,8 +81,7 @@ fun indexCount(array9: Array<Int>): Int {
     var index = 0
     while (index <= array9.size - 1) {
         if (array9[index] == 5) {
-            println(array9[index])
-            break
+            return index
         }
         index++
     }
@@ -236,7 +235,6 @@ fun listFiltering() {
     val list13 = listOf(1, 8, 90, 4, 3, 2, 3, 4, 56, 8, 9, 0, 0, 4546, 45, 33, 23, 23, 2, 34, 67, 2)
     val list14 = mutableListOf<Int>()
     for (i in list13) {
-        if (i == 0) continue
         if (i % 2 == 0)
             list14.add(i)
     }

@@ -8,7 +8,7 @@ fun main() {
     println()
     println(findFirstNegative(listOf(1, 2, -3, 4, 5)))
     println()
-    println(processList(listOf("ofvr", null, "erfer")))
+    processList(listOf("ofvr", null, "erfer"))
     println()
     drawRectangle(10,10)
 }
@@ -47,8 +47,9 @@ fun nullString(number: Int): String?{
 }
 
 //Напишите сигнатуру функции, которая не принимает аргументов и возвращает список nullable строк.
-fun nullList2(): List<String>?{
-    return null
+fun nullList2(): List<String?>{
+    val str: List<String?> = listOf("3242")
+    return str
 }
 
 //Напишите сигнатуру функции,
@@ -71,23 +72,28 @@ fun isEven(number: Int): Boolean {
 // Задача 3:
 // Напишите функцию printNumbersUntil, которая принимает целое число n и выводит на экран числа от 1 до n.
 // Если число n меньше 1, функция должна прекратить выполнение с помощью return без вывода сообщений.
-fun printNumbersUntil(number: Int){
+fun printNumbersUntil(number: Int) {
     if (number < 1)
         return
-    var i = 0
-    while (i++ < number) {
-        print(i)
+    for (i in 1..number) {
+        println(i)
     }
 }
+//    var i = 0
+//    while (i++ < number) {
+//        print(i)
+//    }
+//}
 
 // Задача 4:
 // Создайте функцию findFirstNegative,
 // которая принимает список целых чисел и возвращает первое отрицательное число в списке.
 // Если отрицательных чисел нет, функция должна вернуть null.
 fun findFirstNegative(list: List<Int>): Int? {
-    for (i in list)
+    for (i in list) {
         if (i < 0)
             return i
+    }
     return null
 }
 
@@ -95,7 +101,7 @@ fun findFirstNegative(list: List<Int>): Int? {
 // Напишите функцию processList, которая принимает список строк.
 // Функция должна проходить по списку и выводить каждую строку.
 // Если встречается null значение, функция должна прекратить выполнение с помощью return без возврата значения.
-fun processList(list: List<String?>){
+fun processList(list: List<String?>) {
     for (i in list) {
         if (i == null) {
             return

@@ -174,7 +174,8 @@ fun main() {
 // Определите среднее время выполнения теста.
 
 fun averageTestTime(map: Map<String, Int>) {
-    val result = map.values.average().toInt()
+    val result = map.values
+        .average().toInt()
     println(result)
 }
 //Имеется словарь с метаданными автоматизированных тестов,
@@ -258,7 +259,7 @@ fun testingSettingsForMobile(map: Map<String, String>) {
 //Проверьте, содержит ли словарь с ошибками тестирования (код и описание) определенный код ошибки.
 
 fun testingErrors(map: Map<Int, String>) {
-    val result = map.containsKey(200)
+    val result = map.containsKey(500)
     println(result)
 }
 
@@ -351,7 +352,6 @@ fun transformTestResults(testResults: Map<String, Int>){
 // чтобы учесть новые условия тестирования.
 
 fun increasePerformanceScores(scores: MutableMap<String, Double>){
-    // Увеличиваем каждую оценку на 10%
 println(scores.mapValues {it.value * 1.10 })
 }
 
@@ -383,5 +383,7 @@ fun anyTestsPassed(testResults: Map<String, Boolean>) {
 // которые не прошли успешно и содержат в названии “optional”.
 
 fun filterFailedOptionalTests(testResults: Map<String, Boolean>){
-    println(testResults.filterKeys { it.contains("optional")}.filterValues { !it })
+    println(testResults
+        .filterKeys { it.contains("optional")}
+        .filterValues { !it })
 }

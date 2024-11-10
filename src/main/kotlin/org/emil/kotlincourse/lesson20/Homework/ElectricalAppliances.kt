@@ -11,4 +11,11 @@ abstract class ElectricalAppliances : Powerable {
         isOn = false
         println("Прибор выключен")
     }
+    protected fun checkPower(): Boolean {
+        if (!isOn) {
+            println("Устройство выключено, для дальнейшей работы включите его")
+        }
+        return isOn
+    }
+
 }

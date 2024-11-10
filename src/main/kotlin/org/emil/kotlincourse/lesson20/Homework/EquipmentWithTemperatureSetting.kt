@@ -14,9 +14,11 @@ open class EquipmentWithTemperatureSetting(override val maxTemperature: Int) :
 
     override fun open() {
         isOpen = true
+        println("Устройство открыто")
     }
 
     override fun close() {
         isOpen = false
+        println("Устройство закрыто")
     }
 }

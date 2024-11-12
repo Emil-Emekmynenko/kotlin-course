@@ -1,6 +1,6 @@
 package com.emil.org.emil.kotlincourse.lesson20.Homework
 
-open class EquipmentWithTemperatureSetting(override val maxTemperature: Int) :
+abstract class EquipmentWithTemperatureSetting(override val maxTemperature: Int) :
     ProgrammableHardware(listOf("Метод1", "Метод2")),
     TemperatureRegulatable,
     Openable

@@ -146,7 +146,7 @@ val list3 = mutableListOf(1, 2, 3, 4, 5)
 Задание 4: Добавление Элементов в Список
 Имея изменяемый список целых чисел, добавьте в него новые элементы (например, 6, 7, 8).
  */
-fun addList() {
+fun addList(list: List<Any>) {
     val list4 = mutableListOf(5, 6, 8, 9, 4, 3)
     list4.add(6)
     list4.add(7)

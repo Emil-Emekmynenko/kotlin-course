@@ -36,10 +36,6 @@ fun String.decrypt(base: Int): String {
 }
 
 fun String.pidmarkoz(listName: List<String>) {
-//    for ((j, i) in listName.withIndex()) {
-//        if (i > this.length.toString()){
-//            break} else println("$i\n ${this[j]}")
-//    }
     var i = 0
     var j = 0
     while (i < this.length){

@@ -8,8 +8,11 @@ fun main() {
     println(arrayCheck)
 
     val charCheck = 'i'.charOrNull(1, 2, false)
+    println()
 
     val longCheck: Long = 132421343242134131
+    println(longCheck.longFun())
+
     val mapCheck = mapOf(8 to listOf(1,4,5,6,7)).mapFun(9)
     println(mapCheck)
     val listCheck = mutableListOf("a", "b", "c").mutableListFun("1", 8)

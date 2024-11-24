@@ -7,5 +7,5 @@ package com.emil.org.emil.kotlincourse.lesson22.Homework.extentions
  */
 
 fun <K, V>Pair<K, V>.revert(): Pair<V?, K?> {
-    return Pair(second, first)
+    return second to first
 }

@@ -13,7 +13,7 @@ package com.emil.org.emil.kotlincourse.lesson25.Homework
 
  */
 
-fun Map<List<String>,Set<String>>.allTypes(
+fun Map<List<*>,Set<*>>.allTypes(
     arg1: Byte,
     arg2: Short,
     arg3: Int,
@@ -41,7 +41,7 @@ fun Map<List<String>,Set<String>>.allTypes(
 
 fun main() {
     //анонимную функцию
-    val allTypes0 = fun Map<List<String>, Set<String>>.(
+    val allTypes0 = fun Map<List<*>, Set<*>>.(
         arg1: Byte,
         arg2: Short,
         arg3: Int,
@@ -68,7 +68,7 @@ fun main() {
     }
 
     //лямбда выражение с указанием типа
-    val allTypes1: Map<List<String>, Set<String>>.(
+    val allTypes1: Map<List<*>, Set<*>>.(
         Byte, Short, Int,
         Long, Float, Double,
         String, Boolean, Char,
@@ -87,11 +87,10 @@ fun main() {
         println(str)
         str
     }
-    val map = mapOf(listOf("key") to setOf("value"))
-    map.allTypes(
-        1,2,4,5,6.0f,7.0, "erfe", true,'t','d'
-    )
-    map.allTypes0(1,2,4,5,6.0f,7.0, "erfe", true,'t','d')
-    map.allTypes1(1,2,4,5,6.0f,7.0, "erfe", true,'t','d')
+    val map = mapOf(listOf("уаука") to setOf(""))
+//    val map1 = map.allTypes(1,2,4,5, 6F, 7.0, "erfe", true,'t','d')
+    val map2 = allTypes0(mapOf(),1,2,4,5, 6F, 7.0, "erfe", true,'t','d')
+    println(map2)
+    val map3 = allTypes1(mapOf(),1,2,4,5, 6F, 7.0, "erfe", true,'t','d')
 }
 

@@ -23,9 +23,9 @@ fun main() {
     }
 
     //лямбда выражение с указанием типа
-    val arithmeticMean1: (list: List<Int>) -> Double = { list ->
-        require(list.isNotEmpty()) { "Нужен не пустой список" }
-        list.average()
+    val arithmeticMean1: (List<Int>) -> Double = {
+        require(it.isNotEmpty()) { "Нужен не пустой список" }
+        it.average()
     }
     //лямбда выражение без указания типа
     val arithmeticMean2 = { list: List<Int> ->

@@ -25,7 +25,7 @@ fun main() {
 
 }
 
-fun timeTracker(arg: () -> Unit): Long{
+fun timeTracker(arg: () -> Any): Long{
     val start = System.currentTimeMillis()
     arg()
     val end = System.currentTimeMillis()

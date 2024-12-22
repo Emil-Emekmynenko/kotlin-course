@@ -1,0 +1,66 @@
+{
+  "name": "Alice",
+  "isEmployed": true,
+  "birthDate": "1980-05-10",
+  "position": "CTO",
+  "subordinates": [
+    {
+      "name": "Bob",
+      "isEmployed": true,
+      "birthDate": "1990-08-15",
+      "position": "TEAM_LEAD",
+      "subordinates": [
+        {
+          "name": "Frank",
+          "isEmployed": true,
+          "birthDate": "1998-07-19",
+          "position": "UX_UI",
+          "subordinates": []
+        },
+        {
+          "name": "David",
+          "isEmployed": true,
+          "birthDate": "1993-03-12",
+          "position": "QA",
+          "subordinates": []
+        },
+        {
+          "name": "Charlie",
+          "isEmployed": true,
+          "birthDate": "1995-11-20",
+          "position": "BACKEND_DEV",
+          "subordinates": []
+        }
+      ]
+    },
+    {
+      "name": "Ron",
+      "isEmployed": true,
+      "birthDate": "2000-07-12",
+      "position": "TEAM_LEAD",
+      "subordinates": [
+        {
+          "name": "Grace",
+          "isEmployed": true,
+          "birthDate": "1991-06-22",
+          "position": "GAME_DEV",
+          "subordinates": []
+        },
+        {
+          "name": "David",
+          "isEmployed": true,
+          "birthDate": "1993-03-12",
+          "position": "QA",
+          "subordinates": []
+        },
+        {
+          "name": "Charlie",
+          "isEmployed": true,
+          "birthDate": "1995-11-20",
+          "position": "BACKEND_DEV",
+          "subordinates": []
+        }
+      ]
+    }
+  ]
+}

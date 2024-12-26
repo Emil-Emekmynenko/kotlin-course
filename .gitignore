@@ -44,3 +44,8 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+/src/main/kotlin/org/emil/kotlincourse/lesson*/classes_*.kt
+/src/main/kotlin/org/emil/kotlincourse/lesson23/Теория
+/src/main/kotlin/org/emil/kotlincourse/codewars/Task_*.kt
+

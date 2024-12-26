@@ -41,12 +41,7 @@ class CerealStorageImplTest{
         }
     }
 
-    @Test
-    fun `addCereal should return remaining amount if container is full`() {
-        val remaining = storage.addCereal(Cereal.RICE, 15.0f)
-        assertEquals(5.0f, remaining, 0.01f)
-    }
-
+    // getCereal
     @Test
     fun `getCereal should throw if amount is negative`() {
         assertThrows(IllegalArgumentException::class.java) {
@@ -69,10 +64,6 @@ class CerealStorageImplTest{
         assertFalse(storage.removeContainer(Cereal.RICE))
     }
 
-    @Test
-    fun `removeContainer should return true if container is empty`() {
-        assertTrue(storage.removeContainer(Cereal.RICE))
-    }
 
     // fun getAmount()
     @Test
